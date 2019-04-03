@@ -7,9 +7,13 @@ var app = express();
 // configurar la carpeta public como "pública"
 app.use(express.static('public'));
 
+var contador = 0;
+
 // configurar la ruta inicial
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/public/home.html');
+  contador++;
+  console.log('página vista: ', contador);
 });
 
 // configurar la ruta contacto
