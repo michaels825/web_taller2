@@ -1,0 +1,2 @@
+home: 1
+contacto: 0

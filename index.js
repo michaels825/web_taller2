@@ -1,24 +1,42 @@
 // importar el módulo express
 var express = require('express');
 
+var fs = require('fs');
+
 // crear la variable app usando express
 var app = express();
 
 // configurar la carpeta public como "pública"
 app.use(express.static('public'));
 
-var contador = 0;
+var contador = {
+    home: 0,
+    contacto: 0,
+};
+
+
 
 // configurar la ruta inicial
 app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/public/home.html');
-  contador++;
-  console.log('página vista: ', contador);
+    res.sendFile(__dirname + '/public/home.html');
+    contador.home++;
+    console.log('página vista: ', contador);
+
+    let contenido = 'home: ' + contador.home + '\ncontacto: '+contador.contacto;
+    fs.writeFile('contador.txt', contenido, 'utf8', function(){
+        console.log('archivo escrito');
+    });
 });
 
 // configurar la ruta contacto
 app.get('/contacto', function(request, response){
     response.send('página contacto');
+    contador.contacto++;
+
+    let contenido = 'home: ' + contador.home + '\ncontacto: '+contador.contacto;
+    fs.writeFile('contador.txt', contenido, 'utf8', function(){
+        console.log('archivo escrito');
+    });
 });
 
 // configurar la ruta sobre-mi
