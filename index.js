@@ -28,6 +28,14 @@ app.get('/', function(req, res) {
     });
 });
 
+app.get('/tienda', function(req, res) {
+    res.sendFile(__dirname + '/public/home.html');
+});
+
+app.get('/tienda/gato', function(req, res) {
+    res.sendFile(__dirname + '/public/producto.html');
+});
+
 // configurar la ruta contacto
 app.get('/contacto', function(request, response){
     response.send('página contacto');
