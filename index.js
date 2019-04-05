@@ -1,5 +1,6 @@
 // importar el módulo express
 var express = require('express');
+var motorRender = require('express-handlebars');
 
 var fs = require('fs');
 
@@ -8,6 +9,9 @@ var app = express();
 
 // configurar la carpeta public como "pública"
 app.use(express.static('public'));
+
+app.engine('handlebars', motorRender());
+app.set('view engine', 'handlebars');
 
 var contador = {
     home: 0,
@@ -32,8 +36,24 @@ app.get('/tienda', function(req, res) {
     res.sendFile(__dirname + '/public/home.html');
 });
 
+app.get('/tienda/perro', function(req, res) {
+    var contexto = {
+        titulo: 'Perro',
+        precio: '85714312312',
+        imagen: 'https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/5c3871215bafe83b078adbe3/perro.jpg',
+        descripcion: 'Si te has decidido a tener un perro, seguro que antes de comprar –o mejor, adoptar- a tu nueva mascota, tendrás qué decidir qué raza prefieres en función de tu modo de vida y tu propia personalidad. Hay perros de carácter más agresivo o dominante, otros mansos y alegres, algunos necesitan mucho espacio para correr y jugar, otros son más tranquilos…'
+    };
+    res.render('producto', contexto);
+});
+
 app.get('/tienda/gato', function(req, res) {
-    res.sendFile(__dirname + '/public/producto.html');
+    var contexto = {
+        titulo: 'Gato',
+        precio: '8571431231200000',
+        imagen: 'https://www.feelcats.com/blog/wp-content/uploads/2018/10/gato-atigrado.jpg',
+        descripcion: 'Esa preciosa combinación de patrones jaspeados, moteados o rayados en diferentes tonos, nos da a la idea de una genética caprichosa, que te contaremos, en este original artículo sobre ellos, pero además nos adentraremos en su carácter y peculiaridades, de estos gatos atigrados tan comunes, pero a la vez, tan únicos. ¿empezamos?'
+    };
+    res.render('producto', contexto);
 });
 
 // configurar la ruta contacto
