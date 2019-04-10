@@ -12,10 +12,18 @@
     <article class="producto">
         <h1 class="producto__titulo">{{titulo}}</h1>
         <h3 class="producto__precio">${{precio}}</h3>
-        <img class="producto__imagen" src="{{imagen}}">
+        {{#if imagen}}
+            <img class="producto__imagen" src="{{imagen}}">
+        {{else}}
+            <p>Producto sin imagen, sorry</p>
+        {{/if}}
         <p class="producto__descripcion">
             {{descripcion}}
         </p>
+
+        {{#unless disponible}}
+            <p>Producto no disponible</p>
+        {{/unless}}
     </article>
 
     <a class="boton-bonito" href="/contacto">Contacto</a>
