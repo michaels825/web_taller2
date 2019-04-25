@@ -10,6 +10,15 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "express-handlebars": "^3.0.2"
-  }
+    "express-handlebars": "^3.0.2",
+    "install": "^0.12.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vagyriag/191-web-primer-servidor-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vagyriag/191-web-primer-servidor-express/issues"
+  },
+  "homepage": "https://github.com/vagyriag/191-web-primer-servidor-express#readme"
 }
