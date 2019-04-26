@@ -38,7 +38,7 @@ app.get('/tienda', function(req, res) {
 
 app.get('/tienda/perro', function(req, res) {
     var contexto = {
-        titulo: 'Perro',
+        titulo: 'Perrisisimo',
         precio: '85714312312',
         imagen: 'https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/5c3871215bafe83b078adbe3/perro.jpg',
         descripcion: 'Si te has decidido a tener un perro, seguro que antes de comprar –o mejor, adoptar- a tu nueva mascota, tendrás qué decidir qué raza prefieres en función de tu modo de vida y tu propia personalidad. Hay perros de carácter más agresivo o dominante, otros mansos y alegres, algunos necesitan mucho espacio para correr y jugar, otros son más tranquilos…'
