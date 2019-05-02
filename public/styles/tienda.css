@@ -1,0 +1,76 @@
+html, body {
+  margin: 100px;
+  padding: 0;
+  color: white;
+}
+
+.boton-bonito {
+  background: coral;
+  font-family: sans-serif;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.lista-productos {
+  background: red;
+  background-image: url("https://2.bp.blogspot.com/-TVVgfPPheA4/XMKfwMG9-JI/AAAAAAAAZC0/RMMpbvwWH645_6YuqbaP-nAFKQhlbwGcgCLcBGAs/s1600/fondo_tienda.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.lista-productos__item {
+  width: 270px;
+}
+
+.producto {
+  margin: 20px;
+  text-align: center;
+}
+
+.producto__imagen {
+  width: 250px;
+  padding: 10px;
+}
+
+.producto__titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+.producto__precio {
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+.producto__boton {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  width: 350px;
+  padding: 10px;
+  background-color: #f8cc06;
+  color: #ffffff;
+  text-decoration: none;
+  border: 0ch;
+  border-radius: 20px;
+  margin: 0;
+}
+/*# sourceMappingURL=tienda.css.map */
