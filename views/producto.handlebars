@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="/styles/producto.css">
+</head>
+<body>
+    
+    <article class="producto">
+<div class="imagen">
+        {{#if imagen}}
+            <img class="producto__imagen" src="{{imagen}}">
+        {{else}}
+            <p>Producto sin imagen, sorry</p>
+        {{/if}}
+</div>
+<div class="descripcion">
+        <h1 class="producto__titulo">{{titulo}}</h1>
+        <h3 class="producto__precio">${{precio}}</h3>
+        <p class="producto__descripcion">
+            {{descripcion}}
+        </p>
+
+        {{#unless disponible}}
+            <p>Producto no disponible</p>
+        {{/unless}}
+</div>
+    </article>
+
+
+</body>
+</html>
