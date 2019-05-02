@@ -1,10 +1,11 @@
 html, body {
   margin: 0;
   padding: 0;
-  color: black;
+  color: white;
 }
 
 .producto {
+  background-image: url("/images/fondo_tienda.png");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,5 +28,48 @@ html, body {
 .producto__imagen {
   width: 400px;
   padding: 50px;
+}
+
+.producto .producto__titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+}
+
+.producto .producto__precio {
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+.producto .producto__descripcion {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+.titulo_descripcion {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+}
+
+.descripcion {
+  padding: 60px;
+}
+
+.producto__boton {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  width: 350px;
+  padding: 10px;
+  background-color: #f8cc06;
+  color: #ffffff;
+  text-decoration: none;
+  border: 0ch;
+  border-radius: 20px;
+  margin: 0;
 }
 /*# sourceMappingURL=producto.css.map */
