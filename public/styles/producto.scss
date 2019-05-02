@@ -1,0 +1,22 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    color: black;
+   
+  }
+  .producto{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+
+    &__imagen{
+
+        width: 400px;
+        padding: 50px;
+    }
+
+  }
