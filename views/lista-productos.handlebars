@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
     
@@ -20,10 +22,10 @@
     <div class="lista-productos">
         {{#each listaProductos}}
             <article class="lista-productos__item producto">
-                <img src="{{imagen}}" class="producto__imagen">
+                <img src="{{imagen}}"   class="producto__imagen">
                 <h1 class="producto__titulo">{{titulo}}</h1>
                 <p class="producto__precio">${{precio}}</p>
-                <a href="/tienda/{{titulo}}">Ver más</a>
+                <a class="producto__boton" href="/tienda/{{titulo}}">BUY NOW</a>
             </article>
         {{/each}}
     </div>

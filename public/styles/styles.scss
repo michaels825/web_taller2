@@ -1,3 +1,10 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
 .boton-bonito{
     background: coral;
     font-family: sans-serif;
@@ -7,16 +14,57 @@
 }
 
 .lista-productos{
+    background: red;
+    background-image: url("https://2.bp.blogspot.com/-TVVgfPPheA4/XMKfwMG9-JI/AAAAAAAAZC0/RMMpbvwWH645_6YuqbaP-nAFKQhlbwGcgCLcBGAs/s1600/fondo_tienda.png");
+    
     display: flex;
-    &__item{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: stretch;
 
+    &__item{
+        width: 270px;
     }
 }
 
 .producto{
-    background: gray;
-    margin-right: 30px;
+    margin: 20px;
+    text-align: center;
     &__imagen{
-        width: 100px;
+        width: 250px;
+        padding: 10px;
     }
+    &__titulo{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+
+            }
+
+    &__precio{
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    }
+
+    &__boton{
+        font-family: 'Oswald', sans-serif;
+        font-size: 20px;
+        width: 350px;
+        padding: 10px; 
+        background-color: #f8cc06; 
+        color: #ffffff; 
+        text-decoration: none;
+        border: 0ch;
+        border-radius: 20px; 
+        margin: 0;
+          
+    }
+
+    
+
+
 }
