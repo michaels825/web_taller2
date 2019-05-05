@@ -64,10 +64,11 @@ app.get('/tienda/:categoria?', function(request, response){
 
         var contexto = {
             productos: docs,
-            categoria: request.params.categoria,
+            tipo: request.params.tipo,
             precio: request.query.precio,
-            esDiseno: request.params.categoria == "Diseño",
-            esArquitectura: request.params.categoria == "Arquitectura",
+            accesorio: request.params.tipo == "Accesorio",
+            camiseta: request.params.tipo == "Camiseta",
+            hoodie: request.params.tipo == "Hoodie",
         };
         
         response.render('tienda', contexto);

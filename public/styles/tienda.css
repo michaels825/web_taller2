@@ -2,6 +2,12 @@ html, body {
   margin: 0;
   padding: 0;
   color: white;
+  background: coral;
+  font-family: 'Oswald', sans-serif;
+}
+
+.fondo_tienda {
+  width: 100%;
 }
 
 .boton-bonito {
@@ -13,7 +19,8 @@ html, body {
 }
 
 .lista-productos {
-  background: red;
+  padding: 0;
+  margin: 0;
   background-image: url("https://2.bp.blogspot.com/-TVVgfPPheA4/XMKfwMG9-JI/AAAAAAAAZC0/RMMpbvwWH645_6YuqbaP-nAFKQhlbwGcgCLcBGAs/s1600/fondo_tienda.png");
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,5 +79,189 @@ html, body {
   border: 0ch;
   border-radius: 20px;
   margin: 0;
+}
+
+.centrar {
+  margin: 0 auto;
+  max-width: 1360px;
+}
+
+.califest-header-prin {
+  background-color: #f734bf;
+}
+
+.califest-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.califest-header__logo {
+  padding-left: 5em;
+}
+
+.califest-header__nav {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1em;
+  padding-right: 5em;
+}
+
+.califest-header__items {
+  display: inline;
+}
+
+.califest-header__item {
+  display: inline-block;
+  padding-left: 2em;
+}
+
+.califest-header__items li:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.califest-header li {
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+}
+
+.califest-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-fondo {
+  min-width: 100%;
+  height: auto;
+}
+
+.footer-fondo__imagen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-repeat: repeat-x;
+  background-size: cover;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 580px;
+}
+
+.footer-fondo__imagen * {
+  width: 100%;
+  text-align: center;
+}
+
+.footer-fondo__cont {
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-right: 200px;
+}
+
+.footer-fondo__newslatter {
+  width: 100%;
+  margin: auto;
+}
+
+.footer-fondo__boton {
+  padding-top: 30px;
+}
+
+.footer-fondo__redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-repeat: repeat-x;
+  background-size: cover;
+  width: 100%;
+  height: 280px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-fondo__redes img {
+  width: 70px;
+  height: 70px;
+  padding: 50px;
+}
+
+.footer-fondo__barra {
+  background-color: black;
+}
+
+.footer-fondo__barra img {
+  padding: 3em 0 3em 3em;
+  width: 80px;
+}
+
+.footer-fondo__barra h1 {
+  margin: 0;
+  padding: 0;
+  padding-left: 3em;
+  padding-top: 2em;
+}
+
+.footer-fondo__boton {
+  margin: 0;
+}
+
+.footer-fondo__boton button {
+  font-size: 30px;
+  width: 350px;
+  padding: 8px;
+  background-color: #f8cc06;
+  color: #ffffff;
+  text-decoration: none;
+  border: 0ch;
+  border-radius: 50px;
+  margin: 0;
+}
+
+.footer-fondo__boton button:hover {
+  background-color: #f73496;
 }
 /*# sourceMappingURL=tienda.css.map */
