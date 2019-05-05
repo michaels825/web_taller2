@@ -1,2 +1,2 @@
-home: 3
+home: 1
 contacto: 0
