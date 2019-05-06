@@ -37,6 +37,7 @@ client.connect(function(err) {
     //client.close();
 });
 
+app.use(express.urlencoded({ extended: true }));
 
 var contador = {
     home: 0,
@@ -48,8 +49,8 @@ app.get('/tienda/:categoria?', function(request, response){
     console.log(request.query.precio);
 
     var query = {};
-    if(request.params.categoria){
-        query.categoria = request.params.categoria;
+    if(request.params.tipo){
+        query.categoria = request.params.tipo;
     }
     if(request.query.precio){
         query.precio = { $lte: request.query.precio };
@@ -94,14 +95,9 @@ app.get('/', function(req, res) {
 app.get('/tienda', function(req, res) {
     var contexto = {
         titulo: 'ALL PRODUCTS',
-        nombres: [
-            //'Valeria',
-            //'Alejandro',
-            //'Sebastián'
-        ],
-        listaProductos: productos,
+        tienda: productos,
     };
-    res.render('lista-productos', contexto);
+    res.render('tienda', contexto);
 });
 
 app.get('/tienda/:producto', function(req, res) {
