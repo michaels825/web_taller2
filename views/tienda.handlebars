@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,10 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
+
 <body>
 
-        <header class="califest-header-prin">
+    <header class="califest-header-prin">
         <div class="centrar">
             <div class="califest-header">
                 <img src="/images/logo.png" alt="" class="califest-header__logo">
@@ -29,46 +31,81 @@
         </div>
     </header>
 
-    <div class="fondo_tienda_div">
-                <img src="/images/imagen_fondo_tienda.png" alt="" class="fondo_tienda">
+    <div class="contenedor-uno">
+
+        <div class="contenedor-uno__fondo" style="background-image: url('/images/imagen_fondo_tienda.png')">
+            <div class="centrar">
+                <div class="contenedor-uno__logo">
+                    <img src="/images/logoPrincipal.png" alt="" class="contenedor-uno__front">
+                </div>
+
+
+                <div class="contenedor-uno__slogan">
+                    <p>STORE</p>
+                </div>
+            </div>
+        </div>
 
     </div>
-<h2>Filtros</h2>
-    <ul>
-        <li><a href="/tienda/Accesorio">Accesorio</a></li>
-        <li><a href="/tienda/Hoodie">Hoodie</a></li>
-        <li><a href="/tienda/Camiseta">Camiseta</a></li>
-    </ul>
 
-    {{#if esDiseno}}
-        <label>Ingresa el rango de precio</label>
-        <input value="{{precio}}" class="input-rango" type="range" min="10000" max="30000">
-    {{/if}}
 
-    {{#if esArquitectura}}
-        Categoría Arquitectura
-    {{/if}}
+<div class="header_dos">
 
+
+    <h2>Filtros de tipo</h2>
+    <select class="tipo">
+        <option id="/tienda">seleccione</option>
+        <option id="/tienda/accesorio">Accesorio</option>
+        <option id="/tienda/hoodie">Hoodie</option>
+        <option id="/tienda/camiseta">Camiseta</option>
+    </select>
+
+
+
+    <h2>Filtro de coleccion</h2>
+    <select class="coleccion">
+        <option id="/tienda">seleccione</option>
+        <option id="/tienda/coleccion/nuevo">Nueva coleccion</option>
+        <option id="/tienda/coleccion/viejo">Coleccion 2018</option>
+    </select>
+
+
+
+    <h2>Filtro por artista</h2>
+    <select class="artista">
+        <option id="/tienda">seleccione</option>
+        <option id="/tienda/artista/alan">Alan Walker</option>
+        <option id="/tienda/artista/chain">The Chainsmokers</option>
+        <option id="/tienda/artista/1975">The 1975</option>
+        <option id="/tienda/artista/coldplay">Coldplay</option>
+    </select>
+
+    <div class="carrito">
+        <p>Carrito</p>
+        <span class="carrito__numero"></span>
+    </div>
+
+</div>
     <ul class="lista-productos">
         {{#each productos}}
-             <article class="lista-productos__item producto">
-                <img src="{{imagen}}" class="producto__imagen">
-                <h3 class="producto__titulo">{{titulo}}</h3>
-                <h3 class="producto__titulo">{{nombre}}</h3>
-                <p class="producto__precio">${{precio}}</p>
-                <a class="producto__boton" href="/tienda/{{titulo}}">BUY NOW</a>
-              </article>
+        <article class="lista-productos__item producto">
+            <img src="{{imagen}}" class="producto__imagen">
+            <h3 class="producto__titulo">{{titulo}}</h3>
+            <h3 class="producto__titulo">{{nombre}}</h3>
+            <p class="producto__precio">${{precio}}</p>
+            <a class="producto__boton" href="/tienda/producto/{{titulo}}">BUY NOW</a>
+        </article>
         {{/each}}
     </ul>
 
 
 
     <footer class="footer-fondo">
-<div class="footer-fondo__redes" style="background-image: url('/images/footer-instagram.png')">
-<img src="/images/instagram.jpg" alt="">
-<img src="/images/facebook.png" alt="">
-<img src="/images/youtube.png" alt="">
-</div>
+        <div class="footer-fondo__redes" style="background-image: url('/images/footer-instagram.png')">
+            <img src="/images/instagram.jpg" alt="">
+            <img src="/images/facebook.png" alt="">
+            <img src="/images/youtube.png" alt="">
+        </div>
 
         <div class="footer-fondo__barra">
             <h1>Patrocina</h1>
@@ -85,14 +122,48 @@
         </div>
 
     </footer>
+
     <script>
-        var rango = document.querySelector('.input-rango');
-        function buscarPorPrecio(){
-            console.log(rango.value);
-            location.href = '/tienda/Diseño?precio=' + rango.value;
+
+        function irCategoria(url, ubicacion) {
+
+            var seleccionar = document.querySelector(url);
+            seleccionar.addEventListener('change', function () {
+
+                let categoria = seleccionar.options[seleccionar.selectedIndex].id;
+               
+                location.href = categoria;
+
+
+            });
+
         }
-       // rango.addEventListener('change', buscarPorPrecio);
+
+        irCategoria('.tipo' );
+        irCategoria('.coleccion');
+        irCategoria('.artista' );
+
+
+
+
     </script>
 
+
+    <script src="/scripts/tienda.js"></script>
+
+    <script src="/scripts/almacen.js"></script>
+
+    
+    <script>
+        var cart = new Almacen("carrito");
+
+cart.contarCon("producto");
+document.querySelector('.carrito__numero').append(cart.contador);
+
+
+    </script>
+
+
 </body>
+
 </html>

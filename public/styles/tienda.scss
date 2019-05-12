@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   color: white;
-  background: coral;
+  background:  rgb(247, 52, 191);
   font-family: 'Oswald', sans-serif;
 
  
@@ -10,6 +10,61 @@ html, body {
 .fondo_tienda{
   width: 100%;
 }
+
+.contenedor-uno{
+    
+    text-align: center;
+    align-content: center;
+    height: auto;
+    width: 100%;
+    
+    img:hover{
+        opacity: 0.7;
+        
+    }
+    &__fondo{
+        min-height: 580px;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+    &__boton{
+        margin: 0;
+        
+        button{
+            font-size: 30px;
+            width: 350px;
+            padding: 8px; 
+            background-color: #f8cc06; 
+            color: #ffffff; 
+            text-decoration: none;
+            border: 0ch;
+            border-radius: 50px; 
+            margin: 0;
+            
+        }
+        
+        button:hover{
+            background-color: rgb(247, 52, 150);  
+        }
+        
+    }
+    &__slogan{
+        font-size: 5em;
+        color: white;
+        
+        p{
+            margin: 0;
+            padding: 0
+            
+        }
+        
+    }
+}
+
 
 .boton-bonito {
   background: coral;
@@ -228,6 +283,16 @@ html, body {
       }
       
   }
+
+.header_dos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+
+}
 
 
 

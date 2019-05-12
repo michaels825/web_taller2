@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/producto.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="califest-header-prin">
+        <div class="centrar">
+            <div class="califest-header">
+                <img src="/images/logo.png" alt="" class="califest-header__logo">
+                <nav class="califest-header__nav">
+                    <ul class="califest-header__items">
+                        <li class="califest-header__item"> <a href="">TICKETS</a></li>
+                        <li class="califest-header__item"><a href="#">ABOUT</a></li>
+                        <li class="califest-header__item"><a href="#">GALERY</a></li>
+                        <li class="califest-header__item"><a href="#">LINE UP</a></li>
+                        <li class="califest-header__item"><a href="#">NEWS</a></li>
+                        <li class="califest-header__item"><a href="/tienda">STORE</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="carrito">
+        <p>Carrito</p>
+        <span class="carrito__numero"></span>
+    </div>
+
+<div class="carrito-productos">
+
+
+
+</div>
+
+
+    <footer class="footer-fondo">
+        <div class="footer-fondo__redes" style="background-image: url('/images/footer-instagram.png')">
+            <img src="/images/instagram.jpg" alt="">
+            <img src="/images/facebook.png" alt="">
+            <img src="/images/youtube.png" alt="">
+        </div>
+
+        <div class="footer-fondo__barra">
+            <h1>Patrocina</h1>
+            <img src="/images/jonhy.png" alt="">
+            <img src="/images/nissan.jpg" alt="">
+            <img src="/images/shock.png" alt="">
+            <img src="/images/noisey.png" alt="">
+            <img src="/images/Publimetro.png" alt="">
+            <img src="/images/El-informador.png" alt="">
+            <img src="/images/electro-emite.png" alt="">
+            <img src="/images/SantaMartaTurismo.png" alt="">
+            <img src="/images/Monster.png" alt="">
+
+        </div>
+        <script src="/scripts/tienda.js"></script>
+
+
+        <script src="/scripts/almacen.js"></script>
+
+        <script>
+
+var carrito = document.querySelector(".carrito-productos");
+            var cart = new Almacen("carrito");
+            var productos = cart.obtener('producto');
+productos.forEach( function(producto){
+let p = producto.valor;
+let li = document.createElement('li');
+li.innerHTML = `
+<img class="producto__imagen" src="${p.imagen}">
+        <h1 class="producto__titulo">${p.titulo}</h1>
+        <h3 class="producto__precio">${p.precio}</h3>
+`;
+
+carrito.append(li);
+
+}
+
+
+)
+
+
+        </script>
+
+</body>
+
+</html>

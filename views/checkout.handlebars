@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>checkout</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="content">
+                <div class="division">
+                    <a href="/">
+                        <img src="../static/img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="division">
+                    <ul>
+                        <li>compañia</li>
+                        <li>productos</li>
+                        <li><a href="/checkout">checkout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div id="lista">
+                <div class="column">
+                    <div class="row">
+                        <p>Id</p>
+                    </div>
+                    <div class="row">
+                        <p>Nombre</p>
+                    </div>
+                    <div class="row">
+                        <p>Año</p>
+                    </div>
+                    <div class="row">
+                        <p>Precio</p>
+                    </div>
+                    <div class="row">
+                        <p>x</p>
+                    </div>
+                </div>
+            </div>
+            <div id="datos">
+                <h1>Datos de envío</h1>
+                <form action="/submit-data" method="post">
+                    <label for="">Nombre</label>
+                    <input type="text" name="name" required>
+                    <label for="">Cedula</label>
+                    <input type="text" name="cedula" required>
+                    <label for="">Dirección</label>
+                    <input type="text" name="direccion" required>
+                    <label for="">Medio de pago</label>
+                    <div class="medio-pago">
+                        <label for="">efectivo</label>
+                        <input type="radio" name="pago" value="efectivo" required>
+                        <label for="">credito</label>
+                        <input type="radio" name="pago" value="credito" required>
+                    </div>
+                    <button id="submit-data" type="submit">Enviar</button>
+                </form>
+            </div>
+        </main>
+
+        <div class="carrito"></div>
+        <footer>
+            <div class="links">
+
+                <div class="img">
+                    <img src="../static/img/logo.png" alt="">
+                </div>
+                <ul>
+                    <a href="">
+                        <li>politica de protección de datos</li>
+                    </a>
+                    <a href="">
+                        <li>politica de privacidad</li>
+                    </a> <a href="">
+                        <li>politica de confidencialidad</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="redes">
+                <img src="../static/img/logo-facebook.svg" alt="">
+                <img src="../static/img/logo-twitter.svg" alt="">
+                <img src="../static/img/logo-instagram.svg" alt="">
+            </div>
+
+        </footer>
+    </div>
+    <script src="../static/js/producto.js"></script>
+    <script src="../static/js/checkout.js"></script>
+    <script>
+        //Validación para poder subir y cambiar de página a la de agradecimiento!
+        document.getElementById('submit-data').addEventListener('click', () => {
+            var name = document.getElementsByName('name')[0].value;
+            var direccion = document.getElementsByName('direccion')[0].value;
+            var cedula = document.getElementsByName('cedula')[0].value;
+            var pago = document.getElementsByName('pago')[0].checked ||
+                document.getElementsByName('pago')[1].checked;
+            if (name && direccion && cedula && pago) {
+                localStorage.removeItem('items');
+                console.log("deleted");
+            } else
+                console.log("couldn't be deleted");
+        });
+    </script>
+</body>
+
+</html>

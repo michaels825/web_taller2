@@ -44,22 +44,19 @@ var contador = {
     contacto: 0,
 };
 
-app.get('/tienda/:categoria?', function(request, response){
+app.get('/tienda/:tipo?', function(request, response){
 
     console.log(request.query.precio);
 
     var query = {};
     if(request.params.tipo){
-        query.categoria = request.params.tipo;
-    }
-    if(request.query.precio){
-        query.precio = { $lte: request.query.precio };
+        query.tipo = request.params.tipo;
     }
 
     var collection = db.collection('productos');
     
     // Find some documents
-    collection.find({})
+    collection.find(query)
         .toArray(function(err, docs) {
         assert.equal(err, null);
 
@@ -67,16 +64,129 @@ app.get('/tienda/:categoria?', function(request, response){
             productos: docs,
             tipo: request.params.tipo,
             precio: request.query.precio,
-            accesorio: request.params.tipo == "Accesorio",
-            camiseta: request.params.tipo == "Camiseta",
-            hoodie: request.params.tipo == "Hoodie",
+            coleccion: request.query.coleccion,
+
+            accesorio: request.params.tipo == "accesorio",
+            camiseta: request.params.tipo == "camiseta",
+            hoodie: request.params.tipo == "hoodie",
+
+            nuevo: request.params.coleccion == "nuevo",
+            viejo: request.params.coleccion == "viejo",
+
+            
+            alan: request.params.artista == "alan",
+            chain: request.params.artista == "chain",
+            the1975: request.params.artista == "1975",
+            coldplay: request.params.artista == "coldplay",
         };
+        console.log(docs);
         
         response.render('tienda', contexto);
 
     });
 
 });
+
+
+app.get('/tienda/artista/:tipo?', function(request, response){
+
+    console.log(request.query.precio);
+
+    var query = {};
+    if(request.params.tipo){
+        query.artista = request.params.tipo;
+    }
+
+    var collection = db.collection('productos');
+    
+    // Find some documents
+    collection.find(query)
+        .toArray(function(err, docs) {
+        assert.equal(err, null);
+
+        var contexto = {
+            productos: docs,
+            tipo: request.params.tipo,
+            precio: request.query.precio,
+            coleccion: request.query.coleccion,
+
+            alan: request.params.artista == "alan",
+            chain: request.params.artista == "chain",
+            the1975: request.params.artista == "1975",
+            coldplay: request.params.artista == "coldplay",
+        };
+        console.log(docs);
+        
+        response.render('tienda', contexto);
+
+    });
+
+});
+
+
+
+
+
+app.get('/tienda/coleccion/:tipo?', function(request, response){
+
+    console.log(request.query.precio);
+
+    var query = {};
+    if(request.params.tipo){
+        query.coleccion = request.params.tipo;
+    }
+
+    var collection = db.collection('productos');
+    
+    // Find some documents
+    collection.find(query)
+        .toArray(function(err, docs) {
+        assert.equal(err, null);
+
+        var contexto = {
+            productos: docs,
+            tipo: request.params.tipo,
+            precio: request.query.precio,
+            coleccion: request.query.coleccion,
+
+            nueva: request.params.coleccion == "viejo",
+            coleccion2018: request.params.coleccion == "nuevo",
+        };
+        console.log(docs);
+        
+        response.render('tienda', contexto);
+
+    });
+
+});
+
+
+
+
+
+
+app.get('/tienda/producto/:titulo', function(req, res){
+
+    var collection = db.collection('productos');
+    collection.find({ titulo: req.params.titulo })
+        .toArray(function(err, docs){
+            console.log(docs);
+
+            var contexto = {
+                producto: docs[0]
+            };
+            res.render('producto', contexto);
+        });
+});
+
+app.post('/login', function(request, response){
+    // crear un archivo con la información del usuario
+    console.log(request.body);
+    // redireccionar a otra página
+    response.redirect('/bienvenida');
+});
+
+
 
 
 
@@ -128,17 +238,13 @@ app.get('/contacto', function(request, response){
     });
 });
 
-// configurar la ruta sobre-mi
-app.get('/sobre-mi', function(request, response){
-    response.send('página sobre mi');
+app.get('/carrito', function(request, response){
+response.render('carrito',{});
 });
 
-// configurar la ruta portafolio
-app.get('/portafolio', function(request, response){
-    response.send('mi portafolio');
-});
 
 // iniciar el servidor en el puerto 3000
 app.listen(3000, function() {
-  console.log('Aplicación ejemplo, escuchando el puerto 3000!');
+  console.log('Aplicación, escuchando el puerto 3000!');
 });
+

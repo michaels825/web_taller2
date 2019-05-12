@@ -2,7 +2,8 @@ html, body {
     margin: 0;
     padding: 0;
     color: white;
-   
+    font-family: 'Oswald', sans-serif;
+    background: #f8cc06;
   }
   .producto{
 background-image: url("/images/fondo_tienda.png");
@@ -64,3 +65,152 @@ background-image: url("/images/fondo_tienda.png");
     border-radius: 20px;
     margin: 0;
   }
+
+
+
+  .centrar{
+    margin: 0 auto;
+    max-width: 1360px;
+    
+  }
+  
+  .califest-header-prin{
+    background-color: rgb(247, 52, 191);
+  }
+  
+  .califest-header{
+    
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+    
+    
+    &__logo{
+        padding-left: 5em;
+    }
+    &__nav{
+        text-align: center;
+        justify-content: center;
+        padding-top: 1em;
+        padding-right: 5em;
+    }
+    
+    &__items{
+        display: inline;
+    }
+    &__item{
+        display: inline-block;
+        padding-left: 2em;
+    }
+    
+    &__items li:hover{
+        transform: scale(1.5);
+        transform-origin: center;   
+        
+        
+    }
+    
+    li{
+        transition: transform .2s ease;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }    
+  }
+  
+  
+  
+  .footer-fondo{
+        min-width: 100%;
+        height: auto;
+        
+        &__imagen{
+            display: flex;
+            background-repeat: repeat-x;
+            background-size: cover;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            height: 580px;
+            
+            *{
+                width: 100%;
+                text-align: center;
+            }
+        }
+        &__cont{
+            min-height: 200px;
+            display: flex;
+            width: 30%;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-content: stretch;
+            align-items: flex-end;
+            margin-right: 200px;
+        }
+        
+        &__newslatter{
+            width: 100%;
+            margin: auto;
+        }
+        &__boton{
+            padding-top: 30px;
+        }
+  
+        &__redes{
+            display: flex;
+            background-repeat: repeat-x;
+            background-size: cover;
+            width: 100%;
+            height: 280px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: stretch;
+            align-items: center;
+  
+            img{
+                width: 70px;
+                height: 70px;
+                padding: 50px;
+            }
+        }
+        
+        &__barra{
+            
+            background-color:  rgb(0, 0, 0);  
+            
+            img{
+                padding: 3em 0 3em 3em;
+                width: 80px;
+            }
+            
+            h1{
+                margin: 0;
+                padding: 0;
+                padding-left: 3em;
+                padding-top: 2em;
+            }
+        }
+        &__boton{
+            margin: 0;
+            button{
+                font-size: 30px;
+                width: 350px;
+                padding: 8px; 
+                background-color: #f8cc06; 
+                color: #ffffff; 
+                text-decoration: none;
+                border: 0ch;
+                border-radius: 50px; 
+                margin: 0;
+            }
+  
+            button:hover{
+                background-color: rgb(247, 52, 150);  
+            }
+        }
+        
+    }
