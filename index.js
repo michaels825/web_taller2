@@ -242,6 +242,10 @@ app.get('/carrito', function(request, response){
 response.render('carrito',{});
 });
 
+app.get('/checkout', function(request, response){
+    response.render('checkout',{});
+    });
+
 
 // iniciar el servidor en el puerto 3000
 app.listen(3000, function() {

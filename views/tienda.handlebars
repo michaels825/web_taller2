@@ -51,41 +51,53 @@
 
 <div class="header_dos">
 
-
-    <h2>Filtros de tipo</h2>
+    <h2 class="titulos_filtros">Category</h2>
     <select class="tipo">
-        <option id="/tienda">seleccione</option>
-        <option id="/tienda/accesorio">Accesorio</option>
-        <option id="/tienda/hoodie">Hoodie</option>
-        <option id="/tienda/camiseta">Camiseta</option>
+        <option id="/tienda">Select</option>
+        <option id="/tienda/accesorio">Accessories</option>
+        <option id="/tienda/hoodie">Hoodies</option>
+        <option id="/tienda/camiseta">T-shirts</option>
     </select>
 
 
 
-    <h2>Filtro de coleccion</h2>
+    <h2 class="titulos_filtros">Collection</h2>
     <select class="coleccion">
-        <option id="/tienda">seleccione</option>
-        <option id="/tienda/coleccion/nuevo">Nueva coleccion</option>
-        <option id="/tienda/coleccion/viejo">Coleccion 2018</option>
+        <option id="/tienda">select</option>
+        <option id="/tienda/coleccion/nuevo">New</option>
+        <option id="/tienda/coleccion/viejo">2018</option>
     </select>
 
 
 
-    <h2>Filtro por artista</h2>
+    <h2 class="titulos_filtros">Artist</h2>
     <select class="artista">
-        <option id="/tienda">seleccione</option>
+        <option id="/tienda">Select</option>
         <option id="/tienda/artista/alan">Alan Walker</option>
         <option id="/tienda/artista/chain">The Chainsmokers</option>
         <option id="/tienda/artista/1975">The 1975</option>
         <option id="/tienda/artista/coldplay">Coldplay</option>
     </select>
 
+    <div class="cuenta">
+        <img src="/images/cuenta.png" class="iconos">
+           <p class="titulo_cuentas">Account</p>
+    </div>
+
+        <div class="lista">
+        <img src="/images/lista.png" class="iconos">
+        <p class="titulo_cuentas">Wishlist</p>
+    </div>
+
     <div class="carrito">
-        <p>Carrito</p>
+    <div class="carrito__num"  style="background-image: url('/images/carrito.png')">
         <span class="carrito__numero"></span>
+    </div>
+        <p class="titulo_cuentas">Cart</p>
     </div>
 
 </div>
+
     <ul class="lista-productos">
         {{#each productos}}
         <article class="lista-productos__item producto">
