@@ -67,6 +67,19 @@ html, body {
   font-size: 20px;
   width: 350px;
   padding: 10px;
+  background: #f734bf;
+  color: #ffffff;
+  text-decoration: none;
+  border: 0ch;
+  border-radius: 20px;
+  margin: 0;
+}
+
+.producto-detalle__carrito {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  width: 350px;
+  padding: 10px;
   background-color: #f8cc06;
   color: #ffffff;
   text-decoration: none;
@@ -257,5 +270,48 @@ html, body {
 
 .footer-fondo__boton button:hover {
   background-color: #f73496;
+}
+
+.header_dos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.titulos_filtros {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+.titulo_cuentas {
+  margin: 0;
+}
+
+.iconos {
+  width: 30px;
+}
+
+.carrito__numero {
+  color: #f8cc06;
+}
+
+.carrito__num {
+  width: 40px;
 }
 /*# sourceMappingURL=producto.css.map */

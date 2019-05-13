@@ -58,12 +58,26 @@ background-image: url("/images/fondo_tienda.png");
     font-size: 20px;
     width: 350px;
     padding: 10px;
+    background:  rgb(247, 52, 191);
+    color: #ffffff;
+    text-decoration: none;
+    border: 0ch;
+    border-radius: 20px;
+    margin: 0;
+  }
+
+  .producto-detalle__carrito{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    width: 350px;
+    padding: 10px;
     background-color: #f8cc06;
     color: #ffffff;
     text-decoration: none;
     border: 0ch;
     border-radius: 20px;
     margin: 0;
+
   }
 
 
@@ -213,4 +227,43 @@ background-image: url("/images/fondo_tienda.png");
             }
         }
         
+    }
+
+
+    .header_dos{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: center;
+        align-content: stretch;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+  
+    
+    .titulos_filtros{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+    }
+    
+    .titulo_cuentas{
+    margin: 0;
+    
+    
+    }
+    
+    .iconos{
+      
+        width: 30px;
+    
+    }
+    
+    .carrito__numero{
+        color: #f8cc06;
+    }
+    
+    .carrito__num{
+        width: 40px;
     }

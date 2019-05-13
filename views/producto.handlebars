@@ -29,10 +29,26 @@
         </div>
     </header>
 
-   <div class="carrito">
-        <p>Carrito</p>
+<div class="header_dos">
+
+    <div class="cuenta">
+        <img src="/images/cuenta.png" class="iconos">
+           <p class="titulo_cuentas">Account</p>
+    </div>
+
+        <div class="lista">
+        <img src="/images/lista.png" class="iconos">
+        <p class="titulo_cuentas">Wishlist</p>
+    </div>
+
+    <div class="carrito">
+    <div class="carrito__num"  style="background-image: url('/images/carrito.png')">
         <span class="carrito__numero"></span>
     </div>
+        <p class="titulo_cuentas">Cart</p>
+    </div>
+
+</div>
 
 
     <article class="producto">
@@ -46,7 +62,7 @@
 <div class="descripcion">
         <h1 class="producto__titulo">{{producto.titulo}}</h1>
         <h3 class="producto__precio">${{producto.precio}}</h3>
-        <h1 class="titulo_descripcion">DESCRIPCION</h1>
+        <h1 class="titulo_descripcion">DESCRIPTION</h1>
         <p class="producto__descripcion">
             {{producto.descripcion}}
         </p>
@@ -54,7 +70,7 @@
 
     <div>
 
-        <button class="producto-detalle__carrito">Agregar al carrito</button>
+        <button class="producto-detalle__carrito">ADD TO CART</button>
     </div>
 
 </div>
