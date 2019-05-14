@@ -31,49 +31,57 @@
         </div>
     </header>
 
-    <div class="carrito">
-        <p>Carrito</p>
-        <span class="carrito__numero"></span>
-    </div>
 
-    <div class="carrito-productos">
+<div class="contenedor_boddy">    
 
 
-        <div>
-            <h1>SHIPPING ADRESS</h1>
+        <div class="boddy">
+            <h1 class="titulo_ship">SHIPPING ADRESS</h1>
             <form id="formulario-datos" action="/enviar" method="POST">
-                <input type="text" placeholder="name" name="nombre">
+                <input type="text" placeholder="name" name="nombre" class="inputs">
 
-                <input type="text" placeholder="email" name="email">
+                <input type="text" placeholder="email" name="email" class="inputs">
 
-                <input type="text" placeholder="adress" name="adress">
+                <input type="text" placeholder="adress" name="adress" class="inputs">
 
-                <input type="text" placeholder="city" name="city">
+                <input type="text" placeholder="city" name="city" class="inputs">
 
-                <input type="text" placeholder="state" name="state">
+                <input type="text" placeholder="state" name="state" class="inputs">
 
-                <input type="text" placeholder="phone" name="phone">
+                <input type="text" placeholder="phone" name="phone" class="inputs">
 
-                <input type="radio" value="Credit">
-                <input type="radio" value="Debit">
+                <input type="text" placeholder="Card number" name="card" class="inputs">
 
-                <input type="text" placeholder="Card number" name="card">
+                <input type="text" placeholder="Expiration date" name="expiration" class="inputs">
 
-                <input type="text" placeholder="Expiration date" name="expiration">
+                <input type="text" placeholder="cvv" name="cvv" class="inputs">
 
-                <input type="text" placeholder="cvv" name="cvv">
+                <input type="hidden" id="productos" name="compras" class="inputs">
 
-                <input type="hidden" id="productos" name="compras">
-
-                <button type="submit" id="pagar">pay</button>
+                <button type="submit" id="pagar" class="boton_pay">pay</button>
             </form>
 
         </div>
 
 
+<div class="carrito-productos">
+<h1 class="titulo_carro">CART</h1>
+
+
+ <hr color="blue" size="3" width="75%" noshade="noshade" />
+    <div class="subtotal">
+        <p class="texto_subtotal">
+            TOTAL   $ <span id="precio_total" class="total_numero"></span>
+        </p>
+
+      <p class="titulo_car">DESCRIPTION</p>  
 
     </div>
 
+    </div>
+
+
+</div>
 
     <footer class="footer-fondo">
         <div class="footer-fondo__redes" style="background-image: url('/images/footer-instagram.png')">
@@ -119,6 +127,21 @@
 
             });
 
+            let precios = document.querySelectorAll('.producto__precio');
+            let precio = 0;
+            precios.forEach(function (p, i) {
+
+
+                let original = ((p.innerHTML).replace('$', '')).replace(',', '.');
+                console.log(original)
+
+                let procesar = parseFloat(original);
+                precio += procesar;
+
+            })
+            var subtotal = document.querySelector('#precio_total');
+            subtotal.innerHTML = precio;
+
             var compras = document.querySelector('#productos');
             compras.value = JSON.stringify(productos);
 
@@ -130,6 +153,8 @@
 
 
         </script>
+
+        
 
 </body>
 
