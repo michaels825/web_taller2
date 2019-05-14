@@ -41,12 +41,15 @@
         <p class="titulo_cuentas">Wishlist</p>
     </div>
 
-    <div class="carrito">
-    <div class="carrito__num"  style="background-image: url('/images/carrito.png')">
-        <span class="carrito__numero"></span>
-    </div>
-        <p class="titulo_cuentas">Cart</p>
-    </div>
+<a href="/carrito" class="link">
+        <div class="carrito">
+            <img src="/images/carrito.png" class="iconos">
+            <div class="carrito__num">
+                <span class="carrito__numero"></span>
+            </div>
+            <p class="titulo_cuentas">Cart</p>
+        </div>
+</a>
 
 </div>
 
@@ -113,6 +116,7 @@ agregar.addEventListener("click", function (){
 titulo: document.querySelector('.producto__titulo').innerHTML,
 imagen: document.querySelector('.producto__imagen').src,
 precio: document.querySelector('.producto__precio').innerHTML,
+descripcion: document.querySelector('.producto__descripcion').innerHTML
 
 
 

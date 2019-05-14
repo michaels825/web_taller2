@@ -229,19 +229,48 @@ background-image: url("/images/fondo_tienda.png");
         
     }
 
-
     .header_dos{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: flex-end;
-      align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: stretch;
         align-content: stretch;
         margin-left: 100px;
         margin-right: 100px;
     }
     
-  
+    
+    .tipo{
+        width: 200px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+        font-family: 'Montserrat', sans-serif;
+    
+    }
+    
+    .coleccion{
+        width: 200px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+        font-family: 'Montserrat', sans-serif;
+    
+    }
+    
+    .artista{
+        width: 200px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+        font-family: 'Montserrat', sans-serif;
+    
+    }
+    
     
     .titulos_filtros{
         font-family: 'Montserrat', sans-serif;
@@ -250,20 +279,63 @@ background-image: url("/images/fondo_tienda.png");
     
     .titulo_cuentas{
     margin: 0;
-    
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #f1f1f1;
     
     }
     
+    a{
+        text-decoration: none;
+    
+    }
+    .link{
+    
+        color: #f1f1f1;
+    }
     .iconos{
       
-        width: 30px;
+        width: 40px;
+        margin-top: 10px;
+    
     
     }
     
     .carrito__numero{
-        color: #f8cc06;
+        color: rgb(247, 52, 150);  
     }
     
     .carrito__num{
         width: 40px;
+        position: absolute;
+        top: -5px;
+        left: 15px;
+    }
+    
+    .carrito{
+    
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 40px;
+    }
+    
+    .cuenta{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 40px;
+    }
+    
+    .lista{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 40px;
     }

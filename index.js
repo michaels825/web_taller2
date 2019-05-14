@@ -242,6 +242,43 @@ app.get('/carrito', function(request, response){
 response.render('carrito',{});
 });
 
+app.post("/enviar", function(request, response){
+
+    console.log("pedido procesando");
+    let productos = JSON.parse(datos.compras);
+    if(productos != null){
+        productos = {};
+    }
+
+    let datos = request.body;
+    var pedido = {
+        nombre: datos.nombre,
+        email: datos.email,
+        adress: datos.adress,
+        city: datos.city,
+        state: datos.state,
+        phone: datos.phone,
+        card: datos.card,
+        expiration: datos.expiration,
+        cvv: datos.cvv,
+        compras: productos,
+
+    }
+
+    let coleccion = db.collection("pedidos");
+  coleccion.insertOne(pedido, function(err) {
+    assert.equal(err, null);
+
+    console.log("pedido guardado");
+    response.redirect("/tienda");
+  });
+
+
+});
+
+
+
+
 app.get('/checkout', function(request, response){
     response.render('checkout',{});
     });

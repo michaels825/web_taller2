@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   color: white;
-  background:  rgb(247, 52, 191);
+  background:  #f8cc06; 
   font-family: 'Oswald', sans-serif;
 
  
@@ -338,20 +338,63 @@ html, body {
 
 .titulo_cuentas{
 margin: 0;
-
+margin-bottom: 10px;
+text-decoration: none;
+color: #f1f1f1;
 
 }
 
+a{
+    text-decoration: none;
+
+}
+.link{
+
+    color: #f1f1f1;
+}
 .iconos{
   
-    width: 30px;
+    width: 40px;
+    margin-top: 10px;
+
 
 }
 
 .carrito__numero{
-    color: #f8cc06;
+    color: rgb(247, 52, 150);  
 }
 
 .carrito__num{
     width: 40px;
+    position: absolute;
+    top: -5px;
+    left: 15px;
+}
+
+.carrito{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.cuenta{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.lista{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
 }

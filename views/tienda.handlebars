@@ -49,54 +49,56 @@
     </div>
 
 
-<div class="header_dos">
+    <div class="header_dos">
 
-    <h2 class="titulos_filtros">Category</h2>
-    <select class="tipo">
-        <option id="/tienda">Select</option>
-        <option id="/tienda/accesorio">Accessories</option>
-        <option id="/tienda/hoodie">Hoodies</option>
-        <option id="/tienda/camiseta">T-shirts</option>
-    </select>
-
-
-
-    <h2 class="titulos_filtros">Collection</h2>
-    <select class="coleccion">
-        <option id="/tienda">select</option>
-        <option id="/tienda/coleccion/nuevo">New</option>
-        <option id="/tienda/coleccion/viejo">2018</option>
-    </select>
+        <h2 class="titulos_filtros">Category</h2>
+        <select class="tipo">
+            <option id="/tienda">Select</option>
+            <option id="/tienda/accesorio">Accessories</option>
+            <option id="/tienda/hoodie">Hoodies</option>
+            <option id="/tienda/camiseta">T-shirts</option>
+        </select>
 
 
 
-    <h2 class="titulos_filtros">Artist</h2>
-    <select class="artista">
-        <option id="/tienda">Select</option>
-        <option id="/tienda/artista/alan">Alan Walker</option>
-        <option id="/tienda/artista/chain">The Chainsmokers</option>
-        <option id="/tienda/artista/1975">The 1975</option>
-        <option id="/tienda/artista/coldplay">Coldplay</option>
-    </select>
+        <h2 class="titulos_filtros">Collection</h2>
+        <select class="coleccion">
+            <option id="/tienda">select</option>
+            <option id="/tienda/coleccion/nuevo">New</option>
+            <option id="/tienda/coleccion/viejo">2018</option>
+        </select>
 
-    <div class="cuenta">
-        <img src="/images/cuenta.png" class="iconos">
-           <p class="titulo_cuentas">Account</p>
-    </div>
+
+
+        <h2 class="titulos_filtros">Artist</h2>
+        <select class="artista">
+            <option id="/tienda">Select</option>
+            <option id="/tienda/artista/alan">Alan Walker</option>
+            <option id="/tienda/artista/chain">The Chainsmokers</option>
+            <option id="/tienda/artista/1975">The 1975</option>
+            <option id="/tienda/artista/coldplay">Coldplay</option>
+        </select>
+
+        <div class="cuenta">
+            <img src="/images/cuenta.png" class="iconos">
+            <p class="titulo_cuentas">Account</p>
+        </div>
 
         <div class="lista">
-        <img src="/images/lista.png" class="iconos">
-        <p class="titulo_cuentas">Wishlist</p>
-    </div>
+            <img src="/images/lista.png" class="iconos">
+            <p class="titulo_cuentas">Wishlist</p>
+        </div>
+<a href="/carrito" class="link">
+        <div class="carrito">
+            <img src="/images/carrito.png" class="iconos">
+            <div class="carrito__num">
+                <span class="carrito__numero"></span>
+            </div>
+            <p class="titulo_cuentas">Cart</p>
+        </div>
+</a>
 
-    <div class="carrito">
-    <div class="carrito__num"  style="background-image: url('/images/carrito.png')">
-        <span class="carrito__numero"></span>
     </div>
-        <p class="titulo_cuentas">Cart</p>
-    </div>
-
-</div>
 
     <ul class="lista-productos">
         {{#each productos}}
@@ -143,7 +145,7 @@
             seleccionar.addEventListener('change', function () {
 
                 let categoria = seleccionar.options[seleccionar.selectedIndex].id;
-               
+
                 location.href = categoria;
 
 
@@ -151,9 +153,9 @@
 
         }
 
-        irCategoria('.tipo' );
+        irCategoria('.tipo');
         irCategoria('.coleccion');
-        irCategoria('.artista' );
+        irCategoria('.artista');
 
 
 
@@ -165,12 +167,12 @@
 
     <script src="/scripts/almacen.js"></script>
 
-    
+
     <script>
         var cart = new Almacen("carrito");
 
-cart.contarCon("producto");
-document.querySelector('.carrito__numero').append(cart.contador);
+        cart.contarCon("producto");
+        document.querySelector('.carrito__numero').append(cart.contador);
 
 
     </script>

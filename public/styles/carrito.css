@@ -1,9 +1,9 @@
-tml, body {
+html, body {
   margin: 0;
   padding: 0;
   color: white;
   font-family: 'Oswald', sans-serif;
-  background: lightgray;
+  background: #f0ebeb;
 }
 
 .centrar {
@@ -189,4 +189,114 @@ tml, body {
 .footer-fondo__boton button:hover {
   background-color: #f73496;
 }
-/*# sourceMappingURL=checkout.css.map */
+
+.titulos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  color: #0c67f0;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.productos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  color: #f73496;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.producto__titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  color: #0c67f0;
+  margin-left: 50px;
+}
+
+.producto__descripcion {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: black;
+  margin-left: 50px;
+}
+
+.producto__precio {
+  font-size: 45px;
+  margin-left: 50px;
+}
+
+.texto_subtotal {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  color: #0c67f0;
+  margin-left: 50px;
+  margin-right: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+.total_numero {
+  color: #f734bf;
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+}
+
+.boton_pay {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  width: 350px;
+  padding: 10px;
+  background-color: #f8cc06;
+  color: #ffffff;
+  text-decoration: none;
+  border: 0ch;
+  border-radius: 20px;
+  margin-left: 900px;
+  margin-bottom: 50px;
+}
+/*# sourceMappingURL=carrito.css.map */

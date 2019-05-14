@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="/styles/producto.css">
+    <link rel="stylesheet" href="/styles/carrito.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -31,18 +31,42 @@
         </div>
     </header>
 
-    <div class="carrito">
-        <p>Carrito</p>
-        <span class="carrito__numero"></span>
+
+    <!--
+aqui estan todos mis productos xD
+    -->
+    <div class="carrito-productos">
+
+
+        <div>
+
+            <div class="titulos">
+                <h1>CART</h1>
+                <h1>DESCRIPTION</h1>
+                <h1>PRICE</h1>
+            </div>
+
+
+
+            <hr color="blue" size="3" width="75%" noshade="noshade" />
+
+        </div>
+
+
+
     </div>
 
-<div class="carrito-productos">
+ <hr color="blue" size="3" width="75%" noshade="noshade" />
+    <div class="subtotal">
+        <p class="texto_subtotal">
+            TOTAL   $ <span id="precio_total" class="total_numero"></span>
+        </p>
 
+    </div>
 
-
-</div>
-
-
+    <a href="/checkout">
+        <button class="boton_pay">PAY NOW</button>
+    </a>
     <footer class="footer-fondo">
         <div class="footer-fondo__redes" style="background-image: url('/images/footer-instagram.png')">
             <img src="/images/instagram.jpg" alt="">
@@ -63,6 +87,8 @@
             <img src="/images/Monster.png" alt="">
 
         </div>
+
+
         <script src="/scripts/tienda.js"></script>
 
 
@@ -70,28 +96,44 @@
 
         <script>
 
-var carrito = document.querySelector(".carrito-productos");
+            var carrito = document.querySelector(".carrito-productos");
             var cart = new Almacen("carrito");
             var productos = cart.obtener('producto');
-productos.forEach( function(producto){
-let p = producto.valor;
-let li = document.createElement('li');
-li.innerHTML = `
-<img class="producto__imagen" src="${p.imagen}">
-        <h1 class="producto__titulo">${p.titulo}</h1>
-        <h3 class="producto__precio">${p.precio}</h3>
-        
-`;
+            productos.forEach(function (producto) {
+                let p = producto.valor;
+                let li = document.createElement('li');
+                li.innerHTML = `
+                    <div class="productos">
+                    <img class="producto__imagen" src="${p.imagen}">
+                    <div class="descripcion">
+                        <h1 class="producto__titulo">${p.titulo}</h1>
+                        <h3 class="producto__descripcion">${p.descripcion}</h3>
+                    <div/>
+                    <div class="precios" >
+                        <h3 class="producto__precio">${p.precio}</h3>    
+                    <div/>
+                    <div/>`;
 
-carrito.append(li);
+                carrito.append(li);
+            });
 
-}
+            let precios = document.querySelectorAll('.producto__precio');
+            let precio = 0;
+            precios.forEach(function (p, i) {
 
 
-)
+                let original = ((p.innerHTML).replace('$', '')).replace(',', '.');
+                console.log(original)
 
+                let procesar = parseFloat(original);
+                precio += procesar;
+
+            })
+            var subtotal = document.querySelector('#precio_total');
+            subtotal.innerHTML = precio;
 
         </script>
+
 
 </body>
 

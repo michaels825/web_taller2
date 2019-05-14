@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   color: white;
-  background: #f734bf;
+  background: #f8cc06;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -374,17 +374,86 @@ html, body {
 
 .titulo_cuentas {
   margin: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  color: #f1f1f1;
 }
 
 .iconos {
-  width: 30px;
+  width: 40px;
+  margin-top: 10px;
 }
 
 .carrito__numero {
-  color: #f8cc06;
+  color: #f73496;
 }
 
 .carrito__num {
   width: 40px;
+  position: absolute;
+  top: -5px;
+  left: 15px;
+}
+
+.carrito {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+}
+
+.cuenta {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+}
+
+.lista {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
 }
 /*# sourceMappingURL=tienda.css.map */
